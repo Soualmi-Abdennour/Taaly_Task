@@ -9,7 +9,7 @@ export async function middleware(request) {
   const pathname = request.nextUrl.pathname
 
   // make the login as the entry point instead of / 
-  if(!pathname) return NextResponse.redirect(new URL("/login", request.url));
+  if(pathname==="/") return NextResponse.redirect(new URL("/login", request.url));
 
   // prevent the user from visit the login/signup page after logged in  
   if(NON_PROTECTED_FRONTEND_ROUTES.includes(pathname)){
