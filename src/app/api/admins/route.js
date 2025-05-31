@@ -5,6 +5,9 @@ import { getDocs } from "firebase/firestore";
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 
+export const dynamic = 'force-dynamic';
+
+
 export async function POST(req) {
   const { email: submitedEmail, password: submitedPassword } = await req.json();
   if (!submitedEmail || !submitedPassword)
