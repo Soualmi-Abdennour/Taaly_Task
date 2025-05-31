@@ -3,6 +3,9 @@ import { getDocs } from "firebase/firestore";
 import { NextResponse } from "next/server";
 
 
+export const dynamic = 'force-dynamic';
+
+
 // this route is used by the admin 
 
 export async function GET( req ) {
